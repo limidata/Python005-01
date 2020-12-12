@@ -122,18 +122,18 @@
 - RIGHT JOIN
 
     ```sql
-SELECT Table1.id, Table1.name, Table2.id, Table2.name
+    SELECT Table1.id, Table1.name, Table2.id, Table2.name
     FROM Table1
     RIGHT JOIN Table2
     ON Table1.id = Table2.id;
     ```
-
+    
     | id   | name          | id   | name          |
     | ---- | ------------- | ---- | ------------- |
     | 1    | table1_table2 | 1    | table1_table2 |
     | NULL | NULL          | 3    | table2        |
-
-
+    
+    
 
 5. 使用 MySQL 官方文档，学习通过 sql 语句为上题中的 id 和 name 增加索引，并验证。根据执行时间，增加索引以后是否查询速度会增加？请论述原因，并思考什么样的场景下增加索引才有效。
 
