@@ -47,11 +47,12 @@
 2. 使用 sqlalchemy ORM 方式创建如下表，使用 PyMySQL 对该表写入 3 条测试数据，并读取:
 
 - 用户 id、用户名、年龄、生日、性别、学历、字段创建时间、字段更新时间
+
 - 将 ORM、插入、查询语句作为作业内容提交
 
+  
 
-
-代码： [sqlalchemy_orm_2.py](./sqlalchemy_orm_2.py)
+  > 代码： [sqlalchemy_orm_2.py](./sqlalchemy_orm_2.py)
 
 
 
