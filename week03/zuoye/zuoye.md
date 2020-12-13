@@ -176,20 +176,24 @@
       uid = Column(Integer(), primary_key=True, autoincrement=True)
       name = Column(String(15), nullable=True, unique=True)
   
+  
   class Cash_table(Base):
       __tablename__ = 'cash'
       uid = Column(Integer(), primary_key=True, nullable=True)
-      asset = Column(DECIMAL(19, 4), nullable=True)
+      amount = Column(DECIMAL(19, 4), nullable=True)
+  
   
   class Record_tabl(Base):
       __tablename__ = 'record'
-      one_id = Column(Integer(), primary_key=True)
-      other_id = Column(Integer(), primary_key=True)
-      deal = Column(DECIMAL(19, 4), nullable=True)
+      user_id = Column(Integer(), primary_key=True)
+      payee_id = Column(Integer(), primary_key=True)
+      amount = Column(DECIMAL(19, 4), nullable=True)
       create_date = Column(DateTime(), nullable=True)
   ```
 
   
 
 - 请实现转账 100 极客币的 SQL(可以使用 pymysql 或 sqlalchemy-orm 实现)，张三余额不足，转账过程中数据库 crash 等情况需保证数据一致性。
+
+  > 代码： [sqlalchemy_transfer.py](./sqlalchemy_transfer.py)
 
